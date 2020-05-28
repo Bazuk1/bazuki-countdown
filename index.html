@@ -27,13 +27,15 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-	-webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
   align-items: center;
   font-family: 'Burbank', Arial, sans-serif;
 }
 a {
   color: inherit;
+}
+.maintext {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 .corner {
     position: fixed;
@@ -43,8 +45,9 @@ a {
     margin-bottom: 5px;
     text-align: right;
     font-size: 3vmin;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    background: linear-gradient(120deg,#f542f2 25%,#a1209e 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .leftcorner {
      position: fixed;
@@ -80,15 +83,17 @@ code {
     </head>
     <body>
         <div class="base">
-        <p>Doomsday Event</p>
-        <p id="countdown"></p>
-        <p>Chapter 2, Season 3</p>
-        <p id="countdownend"></p>
+        <div class="maintext">
+          <p>Doomsday Event</p>
+          <p id="countdown"></p>
+          <p>Chapter 2, Season 3</p>
+          <p id="countdownend"></p>
+        </div>
         <div class="corner">
-        <a href="https://www.youtube.com/user/oshrielbaz1">Bazuki</a>
+        <a href=https://www.youtube.com/user/oshrielbaz1>Bazuki</a>
         </div>
         <div class ="leftcorner">
-	<a>Fortnite Battle Royale Event Countdown</a>
+	      <a>Fortnite Battle Royale Event Countdown</a>
         </div>
     <script>
         var countDownDate = new Date("May 30, 2020 21:05").getTime();
