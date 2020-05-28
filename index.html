@@ -123,8 +123,6 @@ code {
             var hours1 = Math.floor((distanceEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes1 = Math.floor((distanceEnd % (1000 * 60 * 60)) / (1000 * 60));
             var seconds1 = Math.floor((distanceEnd % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdownend").innerHTML = days1 + "D " + hours1 + "H " + minutes1 + "M " + seconds1 + "S ";
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "NOW!";
