@@ -101,14 +101,7 @@ code {
 	      <a>Fortnite Battle Royale Event Countdown</a>
         </div>
     <script>
-	function eventCountdown() {
-           document.getElementById("EventCountdown").innerHTML = "Doomsday Event";
-           document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
-}
-        function seasonCountdown() {
-	   document.getElementById("SeasonCountdown").innerHTML = "Chapter 2, Season 3";
-           document.getElementById("countdownend").innerHTML = days1 + "D " + hours1 + "H " + minutes1 + "M " + seconds1 + "S ";
-}
+	
         var countDownDate = new Date("June 6, 2020 21:00").getTime();
         var countDownDateEnd = new Date("June 11, 2020 9:00").getTime();
         var x = setInterval(function() {
@@ -123,6 +116,14 @@ code {
             var hours1 = Math.floor((distanceEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes1 = Math.floor((distanceEnd % (1000 * 60 * 60)) / (1000 * 60));
             var seconds1 = Math.floor((distanceEnd % (1000 * 60)) / 1000);
+        function eventCountdown() {
+           document.getElementById("EventCountdown").innerHTML = "Doomsday Event";
+           document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+}
+        function seasonCountdown() {
+	   document.getElementById("SeasonCountdown").innerHTML = "Chapter 2, Season 3";
+           document.getElementById("countdownend").innerHTML = days1 + "D " + hours1 + "H " + minutes1 + "M " + seconds1 + "S ";
+}
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "NOW!";
