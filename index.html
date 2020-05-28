@@ -107,7 +107,6 @@ code {
 	var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
-            var distanceEnd = countDownDateEnd - now;
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -116,7 +115,6 @@ code {
         function eventCountdown() {
         var x = setInterval(function() {
             var now = new Date().getTime();
-            var distance = countDownDate - now;
             var distanceEnd = countDownDateEnd - now;
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -142,6 +140,11 @@ code {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "NOW!";
             }
+            if (distanceEnd < 0) {
+                clearInterval(x);
+                document.getElementById("countdownend").innerHTML = "NOW!";
+            }
+		
         }, 1000);
 
 
