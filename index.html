@@ -127,7 +127,7 @@ border-radius: 7px;
           var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
           document.getElementById("EventCountdown").innerHTML = "Doomsday Event";
-          document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+          document.getElementById("countdown").innerHTML = hours + "H " + minutes + "M " + seconds + "S ";
         }, 1000);
         function eventCountdown() {
         var x = document.getElementById("EventCountdown");
@@ -143,10 +143,14 @@ border-radius: 7px;
           y.style.display = "none";
   }
 }
-        function playMusic() {
-        var audio = document.getElementById("audio");
-        audio.play();
-          }
+    function playMusic() {
+    var audio = document.getElementById("audio");
+  if (isPlaying) {
+    audio.pause()
+  } else {
+    audio.play();
+  }
+};
           o = document.getElementById("SeasonCountdown");
           o.style.display = "none";
           var p = document.getElementById("countdown");
