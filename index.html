@@ -143,14 +143,21 @@ border-radius: 7px;
           y.style.display = "none";
   }
 }
-    function playMusic() {
     var audio = document.getElementById("audio");
+    var isPlaying = false;
+    function playMusic() {
   if (isPlaying) {
     audio.pause()
   } else {
     audio.play();
   }
 };
+      audio.onplaying = function() {
+   isPlaying = true;
+  };
+  audio.onpause = function() {
+    isPlaying = false;
+  };
           o = document.getElementById("SeasonCountdown");
           o.style.display = "none";
           var p = document.getElementById("countdown");
