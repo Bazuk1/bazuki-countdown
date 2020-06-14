@@ -80,6 +80,8 @@ align-items: center;
 .countdownclass {
   display: none;
 }
+.buttonMusic {font-size: 32px; font-family: 'Burbank', Arial, sans-serif; -webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black; color: #ffffff;}
 .buttonEvent {font-size: 32px; font-family: 'Burbank', Arial, sans-serif; -webkit-text-stroke-width: 1px;
 -webkit-text-stroke-color: black; color: #ffffff;}
 .buttonSeason {font-size: 32px; font-family: 'Burbank', Arial, sans-serif; -webkit-text-stroke-width: 1px;
@@ -94,9 +96,6 @@ border-radius: 7px;
   </head>
   <body>
       <div class="base">
-        <audio autoplay id="Music">
-         <source src="Music.mp3" type="audio/mp3">
-        </audio>
       <div class="maintext">
         <p>Fortnite Countdowns</p>
           <button class="buttonEvent" onclick="eventCountdown()">Doomsday Event</button>
@@ -107,10 +106,7 @@ border-radius: 7px;
         <p id="countdown"></p>
         <p id="SeasonCountdown"></p>
         <p id="countdownend"></p>
-        function playMusic() {
-        var audio = document.getElementById("Music");
-        audio.play();
-      }
+        <audio id="audio" src="Music.mp3"></audio>
         </div>
       </div>
       <div class="corner">
@@ -147,7 +143,11 @@ border-radius: 7px;
           y.style.display = "none";
   }
 }
-          var o = document.getElementById("SeasonCountdown");
+        function playMusic() {
+        var audio = document.getElementById("audio");
+        audio.play();
+          }
+          o = document.getElementById("SeasonCountdown");
           o.style.display = "none";
           var p = document.getElementById("countdown");
           p.style.display = "none";
@@ -192,6 +192,7 @@ border-radius: 7px;
 
 
   </script>
+    
   </body>
   
 </html>
