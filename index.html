@@ -98,12 +98,9 @@ border-radius: 7px;
       <div class="base">
       <div class="maintext">
         <p>Fortnite Countdowns</p>
-          <button class="buttonEvent" onclick="eventCountdown()">Doomsday Event</button>
           <button class="buttonMusic" onclick="playMusic()">Music</button>
           <button class="buttonSeason" onclick="seasonCountdown()">Chapter 2, Season 3</button>
-        <div class="Countdowns">
-        <p id="EventCountdown"></p>
-        <p id="countdown"></p>
+        <div class="Countdowns"> 
         <p id="SeasonCountdown"></p>
         <p id="countdownend"></p>
         <audio id="audio" src="Music.mp3"></audio>
@@ -116,33 +113,7 @@ border-radius: 7px;
       <a>Fortnite Battle Royale Event Countdown</a>
       </div>
   <script>
-      var countDownDate = new Date("June 15, 2020 21:05").getTime();
       var countDownDateEnd = new Date("June 17, 2020 9:00").getTime();
-      
-          var x = setInterval(function() {
-          var now = new Date().getTime(); 
-          var distance = countDownDate - now;
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-          document.getElementById("EventCountdown").innerHTML = "Doomsday Event";
-          document.getElementById("countdown").innerHTML = hours + "H " + minutes + "M " + seconds + "S ";
-        }, 1000);
-        function eventCountdown() {
-        var x = document.getElementById("EventCountdown");
-        if (x.style.display === "none") {
-         x.style.display = "block";
-        } else {
-         x.style.display = "none";
-        }
-        var y = document.getElementById("countdown");
-        if (y.style.display === "none") {
-         y.style.display = "block";
-        } else {
-          y.style.display = "none";
-  }
-}
     var audio = document.getElementById("audio");
     var isPlaying = false;
     function playMusic() {
@@ -190,10 +161,6 @@ border-radius: 7px;
           a.style.display = "none";
   }
 }
-          if (distance < 0) {
-              clearInterval(x);
-              document.getElementById("countdown").innerHTML = "NOW!";
-          }
           if (distanceEnd < 0) {
               clearInterval(x);
               document.getElementById("countdownend").innerHTML = "NOW!";
