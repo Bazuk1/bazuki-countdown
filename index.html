@@ -131,10 +131,6 @@ border-radius: 7px;
   };
           o = document.getElementById("SeasonCountdown");
           o.style.display = "none";
-          var p = document.getElementById("countdown");
-          p.style.display = "none";
-          var o1 = document.getElementById("EventCountdown");
-          o1.style.display = "none";
           var p1 = document.getElementById("countdownend");
           p1.style.display = "none";
           var x = setInterval(function() {
@@ -160,7 +156,7 @@ border-radius: 7px;
         } else {
           a.style.display = "none";
   }
-}
+} 
           if (distanceEnd < 0) {
               clearInterval(x);
               document.getElementById("countdownend").innerHTML = "NOW!";
