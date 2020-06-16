@@ -136,12 +136,11 @@ border-radius: 7px;
           var x = setInterval(function() {
           var now = new Date().getTime();
           var distanceEnd = countDownDateEnd - now;
-          var days1 = Math.floor(distanceEnd / (1000 * 60 * 60 * 24));
           var hours1 = Math.floor((distanceEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           var minutes1 = Math.floor((distanceEnd % (1000 * 60 * 60)) / (1000 * 60));
           var seconds1 = Math.floor((distanceEnd % (1000 * 60)) / 1000);
           document.getElementById("SeasonCountdown").innerHTML = "Chapter 2, Season 3";
-          document.getElementById("countdownend").innerHTML = days1 + "D " + hours1 + "H " + minutes1 + "M " + seconds1 + "S ";
+          document.getElementById("countdownend").innerHTML = hours1 + "H " + minutes1 + "M " + seconds1 + "S ";
         }, 1000);
           function seasonCountdown() {
         var i = document.getElementById("SeasonCountdown");
